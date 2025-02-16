@@ -13,8 +13,14 @@ function removeBgColorById(elementId) {
     element.classList.remove = 'bg-green-500';
 }
 
-function getInnerTextValueById(elementId) {
+function getElementTextValueById(elementId) {
     const element = document.getElementById(elementId);
-    const elementValueText = element.value;
-    return elementValueText;
+    const elementValueText = element.innerText;
+    const value = parseInt(elementValueText);
+    return value;
+}
+
+function setTextByValue(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.innerText = value;
 }

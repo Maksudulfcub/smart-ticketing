@@ -332,20 +332,24 @@
                             </div>
                         </div>
                         <div class="flex flex-col lg:p-10 mt-5 lg:mt-0">
-                            <div class="space-y-8 p-8 bg-gray-100 rounded-xl">
+                            <div class="space-y-3 p-8 bg-gray-100 rounded-xl">
                                 <div class="flex justify-between lg:gap-28 mt-5 lg:mt-0">
-                                    <h4 class="font-bold flex gap-1">Seat <span
-                                            class="px-2 rounded-md text-white bg-green-500">0</span></h4>
+                                    <h4 class="font-bold flex gap-1">Seat
+                                        <span id="selected-seat"
+                                            class="px-2 rounded-md text-white bg-green-500">0</span>
+                                    </h4>
                                     <h4 class="font-bold flex gap-2">Class</h4>
                                     <h4 class="font-bold flex gap-2">Price</h4>
                                 </div>
-                                <div id="seat-container">
-
+                                <div class="flex justify-between text-gray-500">
+                                    <p id="seat-name"></p>
+                                    <p id="seat-class"></p>
+                                    <p id="seat-price"></p>
                                 </div>
                                 <hr class="border mt-10">
                                 <div class="flex justify-between lg:gap-28 gap-5 mt-3">
                                     <h4 class="font-bold flex gap-2">Total Price</h4>
-                                    <h4 class="font-bold flex gap-1">BDT <span
+                                    <h4 class="font-bold flex gap-1">BDT <span id="total-price"
                                             class="px-1 rounded-md bg-green-200">0</span></h4>
                                 </div>
                                 <div class="mt-5">
