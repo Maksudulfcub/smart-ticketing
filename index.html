@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <main class="font-raleway">
+    <main id="main-container" class="font-raleway">
 
         <header class="lg:px-10">
             <!-- Navbar -->
@@ -355,14 +355,15 @@
                                 <div class="mt-5">
                                     <label
                                         class="input text-sm flex items-center gap-2 rounded-2xl flex-col lg:flex-row">
-                                        <input type="text" class="grow" placeholder="Have any coupon?" />
-                                        <span
-                                            class="btn bg-green-500 text-white rounded-2xl opacity-50 cursor-not-allowed">Apply</span>
+                                        <input id="coupon-input" type="text" class="grow"
+                                            placeholder="Have any coupon?" />
+                                        <span id="coupon-button"
+                                            class="btn bg-green-500 text-white rounded-2xl disabled:cursor-none">Apply</span>
                                     </label>
                                 </div>
                                 <div class="flex justify-between lg:gap-28 gap-5 mt-5">
                                     <h4 class="font-bold flex gap-2">Grand Total</h4>
-                                    <h4 class="font-bold flex gap-1">BDT <span
+                                    <h4 class="font-bold flex gap-1">BDT <span id="grand-total"
                                             class="px-1 rounded-md bg-green-200">0</span></h4>
                                 </div>
                             </div>
@@ -372,7 +373,7 @@
                                         <div class="label">
                                             <span class="label-text font-bold">Passenger Name *</span>
                                         </div>
-                                        <input type="text" placeholder="Enter your name"
+                                        <input id="passenger-input" type="text" placeholder="Enter your name"
                                             class="input input-bordered w-full max-w-xs" />
                                     </label>
                                 </div>
@@ -381,7 +382,7 @@
                                         <div class="label">
                                             <span class="label-text font-bold">Phone Number *</span>
                                         </div>
-                                        <input type="number" placeholder="Enter your phone number"
+                                        <input id="phone-input" type="number" placeholder="Enter your phone number"
                                             class="input input-bordered w-full max-w-xs" />
                                     </label>
                                 </div>
@@ -394,8 +395,7 @@
                                             class="input input-bordered w-full max-w-xs" />
                                     </label>
                                 </div>
-                                <button id="next-button"
-                                    class="btn bg-green-500 text-white w-full opacity-40 cursor-not-allowed">Next</button>
+                                <button id="next-button" class="btn bg-green-500 text-white w-full">Next</button>
                                 <div class="lg:flex justify-around text-center">
                                     <a class="underline opacity-40 font-medium" href="">Terms & Conditions</a>
                                     <a class="underline opacity-40 font-medium" href="">Cancellation Policy</a>
@@ -406,20 +406,7 @@
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div id="modal-container" class="lg:px-10 bg-gray-100 hidden">
-                <div class="lg:p-20 bg-gray-100 text-center">
-                    <div class="bg-white space-y-4 py-10 px-5 rounded-xl">
-                        <img class="mx-auto" src="images/success.png" alt="">
-                        <h1 class="lg:text-2xl font-bold text-green-500">SUCCESS</h1>
-                        <P class="text-sm font-bold">Thank you for Booking Our Bus Seats. <br>
-                            We are working hard to find the best service and deals for you.</P>
-                        <p class="text-sm">Shortly you will find a confirmation in your email.</p>
-                        <button class="btn bg-green-500 text-white px-5 py-2 lg:rounded-full w-1/3
-                        ">Continue</button>
-                    </div>
-                </div>
-            </div>
+
 
         </body>
 
@@ -465,6 +452,22 @@
             </footer>
         </footer>
     </main>
+
+    <!-- Modal -->
+    <div id="modal-container" class="lg:px-10 bg-gray-100 hidden">
+        <div class="lg:p-20 bg-gray-100 text-center">
+            <div class="bg-white space-y-4 py-10 px-5 rounded-xl">
+                <img class="mx-auto" src="images/success.png" alt="">
+                <h1 class="lg:text-2xl font-bold text-green-500">SUCCESS</h1>
+                <P class="text-sm font-bold">Thank you for Booking Our Bus Seats. <br>
+                    We are working hard to find the best service and deals for you.</P>
+                <p class="text-sm">Shortly you will find a confirmation in your email.</p>
+                <button class="btn bg-green-500 text-white px-5 py-2 lg:rounded-full w-1/3
+    ">Continue</button>
+            </div>
+        </div>
+    </div>
+
 
     <script src="js/utilities.js"></script>
     <script src="js/scripts.js"></script>
