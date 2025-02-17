@@ -85,10 +85,15 @@ buttons.forEach(button => {
 
         if (newSelected > 0 || passengerInputValue > 0 || phoneInputValue > 0) {
             nextButton.addEventListener('click', function () {
-                mainContainer.classList.add = 'hidden'
-                modalContainer.classList.remove = 'hidden';
+                mainContainer.classList.add('hidden');
+                modalContainer.classList.remove('hidden');
             })
         }
+        const continueButton = getElementNameById('continue-button');
+        continueButton.addEventListener('click',function(){
+            modalContainer.classList.add('hidden');
+            mainContainer.classList.remove('hidden');
+        })
 
     })
 })
